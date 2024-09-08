@@ -1,17 +1,23 @@
-    body{
+    body {
         background-color: black;
-        
+
     }
-    .bg_regist{
+
+    .bg_regist {
         background-color: #ffffff;
-        height: 619px; /* panjang */
-        width: 508px; /* lebar */
+        height: 595px;
+        /* panjang */
+        width: 508px;
+        /* lebar */
         position: absolute;
-        top: 50%; /* Memposisikan elemen 50% dari atas layar */
-        left: 50%; /* Memposisikan elemen 50% dari kiri layar */
+        top: 50%;
+        /* Memposisikan elemen 50% dari atas layar */
+        left: 50%;
+        /* Memposisikan elemen 50% dari kiri layar */
         transform: translate(-50%, -50%);
         border-radius: 20px;
     }
+
     .textmid {
         color: black;
         font-size: 35px;
@@ -20,6 +26,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
     }
+
     .silahkan {
         color: #929292;
         font-size: 18px;
@@ -27,57 +34,100 @@
         margin-top: 20px;
         font-family: 'Poppins', sans-serif;
     }
+
     .form_username input {
         width: 428px;
-        height: 66px; 
+        height: 66px;
         margin-left: 36px;
         box-sizing: border-box;
         border-radius: 10px;
         border-width: 1px;
     }
+
+    .label_usn {
+        background-color: #ffffff;
+        position: absolute;
+        margin-left: 60px;
+        margin-top: 9px;
+    }
+    .label_pw {
+        background-color: #ffffff;
+        position: absolute;
+        margin-left: 60px;
+        margin-top: 29px;
+    }
+    .label_konfpw {
+        background-color: #ffffff;
+        position: absolute;
+        margin-left: 60px;
+        margin-top: 29px;
+    }
+
     .form_password input {
         width: 428px;
-        height: 66px;        
+        height: 66px;
         margin-left: 36px;
+        margin-top: 20px;
         box-sizing: border-box;
         border-radius: 10px;
         border-width: 1px;
     }
+
     .form_konfirmasi_password input {
         width: 428px;
-        height: 66px;         
+        height: 66px;
         margin-left: 36px;
+        margin-top: 20px;
         box-sizing: border-box;
         border-radius: 10px;
         border-width: 1px;
-    }   
-    .form_button {
-        
-        text-align: center;
-        margin-top: 60px; /* Spasi di atas tombol */
     }
+
+    .form_button {
+
+        text-align: center;
+        margin-top: 34px;
+        /* Spasi di atas tombol */
+    }
+
     .form_button button {
         width: 428px;
-        height: 66px; 
-        background-color: #654520; /* Hijau default */
-        color: white; /* Warna teks default */
-        border: none; /* Menghilangkan border default */
-        padding: 15px 158px; /* Spasi di dalam tombol */
+        height: 66px;
+        background-color: #654520;
+        /* Hijau default */
+        color: white;
+        /* Warna teks default */
+        border: none;
+        /* Menghilangkan border default */
+        padding: 15px 158px;
+        /* Spasi di dalam tombol */
         text-align: center;
-        text-decoration: none; /* Menghilangkan garis bawah */
-        display: inline-block; /* Menampilkan tombol secara inline */
-        font-size: 16px; /* Ukuran teks */
-        margin: 4px 2px; /* Spasi di sekitar tombol */
-        cursor: pointer; /* Mengubah cursor menjadi pointer saat hover */
-        border-radius: 10px; /* Sudut tumpul tombol */
+        text-decoration: none;
+        /* Menghilangkan garis bawah */
+        display: inline-block;
+        /* Menampilkan tombol secara inline */
+        font-size: 16px;
+        /* Ukuran teks */
+        margin: 4px 2px;
+        /* Spasi di sekitar tombol */
+        cursor: pointer;
+        /* Mengubah cursor menjadi pointer saat hover */
+        border-radius: 10px;
+        /* Sudut tumpul tombol */
         transition: background-color 0.3s ease;
     }
-    
+
     .form_button button:hover {
         background-color: #ffffff;
         color: black;
         border-width: 10px;
-        border: 2px solid  #654520;
-    
+        border: 2px solid #654520;
+
         /* Warna tombol saat hover */
+    }
+    .tanya {
+        color: #ffffff;
+        position: absolute;
+        margin-top: 700px;
+        margin-left: 44%;
     }
