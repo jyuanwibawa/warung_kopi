@@ -4,18 +4,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['form_password'];
     $confirmPassword = $_POST['form_konfirmasi_password'];
 
-    // Check if the password matches the confirmation password
+    // Cek jika password dan konfirmasi password cocok
     if ($password !== $confirmPassword) {
-        echo "<script>alert('Password tidak cocok!'); window.location.href = 'register.html';</script>";
-        exit();
+        header('Location: register.html');
+        exit();  // Pastikan skrip berhenti setelah pengalihan
     }
 
-    // Save the data to a file (plaintext for demo purposes)
+    // Simpan data ke file plaintext
     $file = fopen("users.txt", "a");
     fwrite($file, "Username: " . $username . "\nPassword: " . $password . "\n\n");
     fclose($file);
 
-    // Success message
-    echo "<script>alert('Berhasil register!'); window.location.href = 'login.html';</script>";
+    // Redirect setelah berhasil registrasi
+    header('Location: ../login.html');
+    exit();  // Pastikan skrip berhenti setelah pengalihan
 }
 ?>
