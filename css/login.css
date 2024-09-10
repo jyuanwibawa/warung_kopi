@@ -3,14 +3,8 @@
     
     background-repeat: no-repeat;
     background-size: cover;
-    /* Gambar akan menutupi seluruh layar */
     background-position: center;
-    /* Gambar akan berada di tengah */
     height: 95vh;
-    /* Mengatur tinggi body agar sebesar tinggi layar */
-    
-   
-
 }
 .bg::before {
     content: "";
@@ -19,23 +13,22 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi 50% */
-    z-index: 0; /* Pseudo elemen akan berada di atas gambar */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
 }
 
 .bg_login {
     background-color: #ffffff;
     height: 500px;
-    /* panjang */
     width: 508px;
-    /* lebar */
     position: absolute;
-    top: 50%;
-    /* Memposisikan elemen 50% dari atas layar */
-    left: 50%;
-    /* Memposisikan elemen 50% dari kiri layar */
+   margin-top: 100px;
+   margin-left: 550px;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
 }
 
 .textmid {
@@ -107,26 +100,16 @@
     width: 428px;
     height: 66px;
     background-color: #654520;
-    /* Hijau default */
     color: white;
-    /* Warna teks default */
     border: none;
-    /* Menghilangkan border default */
     padding: 15px 158px;
-    /* Spasi di dalam tombol */
     text-align: center;
     text-decoration: none;
-    /* Menghilangkan garis bawah */
     display: inline-block;
-    /* Menampilkan tombol secara inline */
     font-size: 18px;
-    /* Ukuran teks */
     margin: 4px 2px;
-    /* Spasi di sekitar tombol */
     cursor: pointer;
-    /* Mengubah cursor menjadi pointer saat hover */
     border-radius: 10px;
-    /* Sudut tumpul tombol */
     transition: background-color 0.3s ease;
     font-weight: bold;
 }
@@ -147,9 +130,20 @@
     margin-left: 40%;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
 }
 a{
     color: #ffffff;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
+.bg_login.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
