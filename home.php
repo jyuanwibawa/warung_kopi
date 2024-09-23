@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['username'])) {
-
     header("Location: login.html");
     exit();
 }
@@ -33,7 +31,19 @@ if (!isset($_SESSION['username'])) {
         <div class="hi_user">Hi, <?php echo $_SESSION['username']; ?>👋🏻</div>
     </div>
 
-    <div class="bg_tengah"></div>
+    <!-- Search Form -->
+    <div class="bg_tengah">
+        <div class="formcaritengah">
+            <input type="text" placeholder="Cari disini..." class="search-input">
+            <button class="search-button">
+                <img src="search-icon.png" alt="Search" class="search-icon">
+            </button>
+        </div>
+        <div class="border_icon">
+            <img src="../assets/maskot.svg" alt="Girl in a jacket" width="277" height="277">
+        </div>
+    </div>
+
     <div class="bg_bawah">
         <div class="meetnmugbawah"><b>MeetnMug</b></div>
         <div class="temukanbawah">Temukan kafe terbaik yang sempurna untuk<br>
@@ -46,7 +56,6 @@ if (!isset($_SESSION['username'])) {
 
         <hr class="garis">
         <div class="copyright">Copyright © 2024 | By Kelompok 2 🤍</div>
-        </div>
     </div>
 </body>
 </html>
