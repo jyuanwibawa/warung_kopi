@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputUsername = trim($_POST['form_username']);
     $inputPassword = trim($_POST['form_password']);
@@ -31,14 +33,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if ($isAuthenticated) {
-            header("Location: ../home.html");
+            // Set session untuk menyimpan username
+            $_SESSION['username'] = $currentUser['username'];
+
+            header("Location: ../home.php");
             exit();
         } else {
             header("Location: ../login.html");
             exit();
         }
     } else {
-        // Handle the file not found case if needed
+        // Handle jika file tidak ditemukan
         header("Location: ../login.html");
         exit();
     }

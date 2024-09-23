@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['username'])) {
+
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +30,7 @@
     <div class="ba">By Activity</div>
     <div class="hi">
         <div class="hi_elips"></div>
-        <div class="hi_user">Hi, Firza👋🏻</div>
+        <div class="hi_user">Hi, <?php echo $_SESSION['username']; ?>👋🏻</div>
     </div>
 
     <div class="bg_tengah"></div>
