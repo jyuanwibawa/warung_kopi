@@ -5,6 +5,20 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+/* Styling for Banner Image */
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    width: 700px;
+    /* Maximum width for the banner */
+    height: 200px;       /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+
 
 /* Navbar Styles */
 .navbar {
@@ -46,13 +60,44 @@
     background-color: #575757;
     border-radius: 4px;
 }
+.card {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.card-img {
+    width: 200px;
+    height: 100px;
+    border-radius: 8px 0 0 8px;
+}
+
+.card-content {
+    padding: 20px;
+    width: 60%;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #333;
+}
 
 /* Footer Styles */
 .footer {
     background-color: #654520;
     color: #fff;
     padding: 20px 0;
-    position: absolute;
     width: 100%;
     bottom: 0;
 }
@@ -81,7 +126,6 @@
 
 .footer-right .footer-links li a {
     color: #fff;
-    text-decoration: none;
 }
 
 .footer-right .footer-links li a:hover {
