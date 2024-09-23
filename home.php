@@ -40,8 +40,38 @@ if (!isset($_SESSION['username'])) {
             </button>
         </div>
         <div class="border_icon">
-            <img src="../assets/maskot.svg" alt="Girl in a jacket" width="277" height="277">
+            <img src="assets/maskot.svg" width="277" height="277" >
         </div>
+
+        <div class="howday"><b>How’s your day?</b><br></div>
+        <div class="ratehari">Rate harimu dengan emoji! Gimana hari ini?</div>
+
+        <div class="howmood"><b>How’s your mood?</b><br></div>
+        <div class="tetengah">Temukan kafe yang cocok dengan suasana hatimu</div>
+
+        
+
+
+        <div class="wdy"><b>What do you want to do now?</b><br></div>
+        <div class="kira">Kira kira apa agenda kamu hari ini?</div>
+
+        <div class="gambar_rapat">
+            <img src="assets/cafe-rapat.svg">
+        </div>
+        <div class="gambar_belajar">
+            <img src="assets/cafe-belajar.svg">
+        </div>
+        <div class="gambar_tim">
+            <img src="assets/cafe-bekerjatim.svg">
+        </div>
+
+        <div class="kotak_rapat"></div>
+        <div class="kotak_belajar"></div>
+        <div class="kotak_tim"></div>
+
+        <div class="word_rapat"><b>Rapat</b></div>
+        <div class="word_belajar"><b>Belajar</b></div>
+        <div class="word_tim"><b>Bekerja Tim</b></div>
     </div>
 
     <div class="bg_bawah">

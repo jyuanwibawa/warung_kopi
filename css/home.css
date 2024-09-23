@@ -128,11 +128,151 @@
     border-color: #654520;
     position: absolute;
     background-color: #F7EFE6;
+    
+}
+.border_icon img {
+    margin-top: 27px;
+    margin-left: 71px;
+}
+
+.howday {
+    margin-left: 610px;
+    margin-top: 545px;
+    color: #654520;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+.howmood {
+    margin-left: 110px;
+    margin-top: 939px;
+    color: #654520;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+.tetengah {
+    margin-left: 110px;
+    margin-top: 1011px;
+    color: #929292;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+.ratehari {
+    margin-left: 610px;
+    margin-top: 617px;
+    color: #929292;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+
+.wdy {
+    margin-left: 110px;
+    margin-top: 1512px;
+    color: #654520;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+.kira {
+    margin-left: 110px;
+    margin-top: 1593px;
+    color: #929292;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+.gambar_rapat {
+    height: 338px;
+    width: 314px;
+    margin-left: 110px;
+    margin-top: 1667px;
+    align-items: center;
+    position: absolute;
+}
+
+.gambar_belajar {
+    height: 338px;
+    width: 314px;
+    margin-left: 486px;
+    margin-top: 1667px;
+    align-items: center;
+    position: absolute;
+}
+
+.gambar_tim {
+    height: 338px;
+    width: 314px;
+    margin-left: 862px;
+    margin-top: 1667px;
+    align-items: center;
+    position: absolute;
+}
+
+.kotak_rapat {
+    height: 56px;
+    width: 219px;
+    margin-left: 157.5px;
+    margin-top: 1949px;
+    background-color: #654520;
+    position: absolute;
+}
+
+.kotak_belajar {
+    height: 56px;
+    width: 219px;
+    margin-left: 533.5px;
+    margin-top: 1949px;
+    background-color: #654520;
+    position: absolute;
+}
+
+.kotak_tim {
+    height: 56px;
+    width: 219px;
+    margin-left: 909.5px;
+    margin-top: 1949px;
+    background-color: #654520;
+    position: absolute;
+}
+
+.word_rapat {
+    margin-left: 229.5px;
+    margin-top: 1959px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+
+.word_belajar {
+    margin-left: 599px;
+    margin-top: 1959px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+
+.word_tim {
+    margin-left: 946px;
+    margin-top: 1959px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
 }
 
 .bg_bawah {
     background-color: #654520;
-    margin-top: 1800px;
+    margin-top: 2166px;
     height: 500px;
     width: 100%;
     position: absolute;
