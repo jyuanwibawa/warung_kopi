@@ -88,7 +88,7 @@
     top: 0;
     left: 0;
     margin-top: 1600px;
-    height: 361px;
+    height: 500px;
     width: 1536px;
     position: absolute;
 }
@@ -104,7 +104,21 @@
 .temukanbawah {
     color: #FFFEFB;
     font-size: 20px;
+    text-align: justify;
     margin-top: 14px;
     margin-left: 104px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.garis {
+    border: 1px solid #FFFFFF;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
 }
