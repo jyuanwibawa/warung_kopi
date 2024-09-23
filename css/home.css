@@ -1,0 +1,30 @@
+.bg_atas {
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 361px;
+    width: 1536px;
+    position: absolute;
+}
+
+.meetnmug {
+    color: #FFFEFB;
+    font-size: 28px;
+    margin-top: 64px;
+    margin-left: 177px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg_tengah {
+    
+}
+
+.bg_bawah {
+    background-color: #654520;
+    top: 0;
+    left: 0;
+    margin-top: 1600px;
+    height: 361px;
+    width: 1536px;
+    position: absolute;
+}
