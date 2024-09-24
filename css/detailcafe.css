@@ -6,26 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
-/* Styling for Banner Image */
-.banner {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.banner img {
-    width: 1090px;
-
-    height: auto;
-    border-radius: 8px;
-    /* Optional: Add rounded corners */
-}
-
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1090px;
     margin: auto;
     overflow: hidden;
+    margin-top: 30px;
 }
 
 .carousel-inner {
@@ -170,57 +157,10 @@
 .footer-right .footer-links li a:hover {
     text-decoration: underline;
 }
-
-/* Main Content */
 .content {
     padding: 40px 20px;
     text-align: center;
 }
-
-/* Rating Section */
-.rating {
-    font-size: 18px;
-    color: #ffa500;
-    /* Color for the stars */
-    margin-top: 10px;
-}
-
-/* Button Styling */
-.btn {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 10px 20px;
-    background-color: #654520;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.btn:hover {
-    background-color: #4b3619;
-}
-
-.card love-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    margin-top: 5;
-    background-color: transparent;
-
-    font-size: 24px;
-    color: #ff4d4d;
-    /* Red color for love icon */
-    cursor: pointer;
-}
-
-.love-btn:hover {
-    color: #ff1a1a;
-    /* Darker red on hover */
-}
-
-/* Description Section */
 .description {
     padding: 40px;
     margin-top: 90px;
@@ -228,7 +168,7 @@
 }
 
 .description-content {
-    max-width: 109  0px;
+    max-width: 1090px;
     margin-left: 60px;
 }
 
