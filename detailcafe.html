@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Navbar, Footer, Banner, and Card</title>
+    <link rel="stylesheet" href="css/detailcafe.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="" style="height: 50px;">
+           
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">By Mood</a></li>
+            <li><a href="#services">By Activity</a></li>
+        </ul>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/rapat-lebar.svg" alt="Banner Image 1">
+                <div class="carousel-content">
+                    <h2>Flava Cafe</h2>
+                    <p>Jl. Sigura-gura Kec. Lowokwaru, Malang, Jawa Timur</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/banner-image2.svg" alt="Banner Image 2">
+                <div class="carousel-content">
+                    <h2>Exciting Opportunities</h2>
+                    <p>Explore the latest innovations in the industry.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/banner-image3.svg" alt="Banner Image 3">
+                <div class="carousel-content">
+                    <h2>Get Inspired</h2>
+                    <p>Hear from top industry leaders and experts.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2024 My Website</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+        currentIndex = (currentIndex + direction + totalItems) % totalItems;
+        document.querySelector('.carousel-inner').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
+

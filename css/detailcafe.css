@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Styling for Banner Image */
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    width: 1090px;
+    
+    height: auto;      
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    position: relative;
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.carousel-content h2 {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.carousel-content p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%
+}
+
+.prev {
+    left: 900px;
+    margin-top: 90px;
+}
+
+.next {
+    right: 20px;
+    margin-top: 90px;
+}
+
+
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #654520;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+   margin-left: 60px;
+}
+
+
+/* Centering the nav-links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 450px;  /* This centers the nav links */
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    max-width: 1090px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+    margin: 30px;
+}
+
+.card-content {
+    padding: 20px;
+    width: 60%;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.card-content p {
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #654520;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right .footer-links {
+    list-style: none;
+}
+
+.footer-right .footer-links li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.footer-right .footer-links li a {
+    color: #fff;
+}
+
+.footer-right .footer-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+/* Rating Section */
+.rating {
+    font-size: 18px;
+    color: #ffa500; /* Color for the stars */
+    margin-top: 10px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 20px;
+    background-color: #654520;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #4b3619;
+}
+.card love-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 5;
+    background-color: transparent;
+    
+    font-size: 24px;
+    color: #ff4d4d; /* Red color for love icon */
+    cursor: pointer;
+}
+
+.love-btn:hover {
+    color: #ff1a1a; /* Darker red on hover */
+}
