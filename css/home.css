@@ -189,6 +189,41 @@
     font-family: 'Poppins', sans-serif;
     position: absolute;
 }
+
+.gambar_tenang {
+    height: 338px;
+    width: 314px;
+    margin-left: 110px;
+    margin-top: 1085px;
+    align-items: center;
+    position: absolute;
+}
+
+.gambar_ramai {
+    height: 338px;
+    width: 314px;
+    margin-left: 486px;
+    margin-top: 1085px;
+    align-items: center;
+    position: absolute;
+}
+.gambar_art {
+    height: 338px;
+    width: 314px;
+    margin-left: 862px;
+    margin-top: 1085px;
+    align-items: center;
+    position: absolute;
+}
+.gambar_modern {
+    height: 338px;
+    width: 314px;
+    margin-left: 1238px;
+    margin-top: 1085px;
+    align-items: center;
+    position: absolute;
+}
+
 .gambar_rapat {
     height: 338px;
     width: 314px;
@@ -213,6 +248,39 @@
     margin-left: 862px;
     margin-top: 1667px;
     align-items: center;
+    position: absolute;
+}
+
+.kotak_tenang {
+    height: 56px;
+    width: 219px;
+    margin-left: 157.5px;
+    margin-top: 1367px;
+    background-color: #654520;
+    position: absolute;
+}
+.kotak_ramai {
+    height: 56px;
+    width: 219px;
+    margin-left: 533.5px;
+    margin-top: 1367px;
+    background-color: #654520;
+    position: absolute;
+}
+.kotak_art {
+    height: 56px;
+    width: 219px;
+    margin-left: 909.5px;
+    margin-top: 1367px;
+    background-color: #654520;
+    position: absolute;
+}
+.kotak_modern {
+    height: 56px;
+    width: 219px;
+    margin-left: 1285.5px;
+    margin-top: 1367px;
+    background-color: #654520;
     position: absolute;
 }
 
@@ -241,6 +309,41 @@
     margin-top: 1949px;
     background-color: #654520;
     position: absolute;
+}
+
+.word_tenang {
+    margin-left: 220px;
+    margin-top: 1377px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+
+.word_ramai {
+    margin-left: 602.5px;
+    margin-top: 1377px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+
+.word_art {
+    margin-left: 974px;
+    margin-top: 1377px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+.word_modern {
+    margin-left: 1347.5px;
+    margin-top: 1377px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
 }
 
 .word_rapat {
