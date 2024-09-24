@@ -49,11 +49,18 @@ if (!isset($_SESSION['username'])) {
         <div class="howmood"><b>How’s your mood?</b><br></div>
         <div class="tetengah">Temukan kafe yang cocok dengan suasana hatimu</div>
 
-        
-
-
         <div class="wdy"><b>What do you want to do now?</b><br></div>
         <div class="kira">Kira kira apa agenda kamu hari ini?</div>
+
+        <div class="gambar_tenang">
+            <img src="assets/cafe-tenang.svg">
+        </div>
+        <div class="gambar_ramai">
+            <img src="assets/cafe-ramai.svg">
+        </div>
+        <div class="gambar_art">
+            <img src="assets/cafe-art.svg">
+        </div>
 
         <div class="gambar_rapat">
             <img src="assets/cafe-rapat.svg">
@@ -65,9 +72,17 @@ if (!isset($_SESSION['username'])) {
             <img src="assets/cafe-bekerjatim.svg">
         </div>
 
+        <div class="kotak_tenang"></div>
+        <div class="kotak_ramai"></div>
+        <div class="kotak_art"></div>
+
         <div class="kotak_rapat"></div>
         <div class="kotak_belajar"></div>
         <div class="kotak_tim"></div>
+
+        <div class="word_tenang"><b>Tenang</b></div>
+        <div class="word_ramai"><b>Ramai</b></div>
+        <div class="word_art"><b>Artistik</b></div>
 
         <div class="word_rapat"><b>Rapat</b></div>
         <div class="word_belajar"><b>Belajar</b></div>
