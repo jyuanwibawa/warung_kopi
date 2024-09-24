@@ -215,6 +215,14 @@
     align-items: center;
     position: absolute;
 }
+.gambar_modern {
+    height: 338px;
+    width: 314px;
+    margin-left: 1238px;
+    margin-top: 1085px;
+    align-items: center;
+    position: absolute;
+}
 
 .gambar_rapat {
     height: 338px;
@@ -267,6 +275,14 @@
     background-color: #654520;
     position: absolute;
 }
+.kotak_modern {
+    height: 56px;
+    width: 219px;
+    margin-left: 1285.5px;
+    margin-top: 1367px;
+    background-color: #654520;
+    position: absolute;
+}
 
 .kotak_rapat {
     height: 56px;
@@ -315,6 +331,14 @@
 
 .word_art {
     margin-left: 974px;
+    margin-top: 1377px;
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+.word_modern {
+    margin-left: 1347.5px;
     margin-top: 1377px;
     font-size: 24px;
     color: #ffffff;

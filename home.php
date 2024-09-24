@@ -61,6 +61,9 @@ if (!isset($_SESSION['username'])) {
         <div class="gambar_art">
             <img src="assets/cafe-art.svg">
         </div>
+        <div class="gambar_modern">
+            <img src="assets/cafe-art.svg">
+        </div>
 
         <div class="gambar_rapat">
             <img src="assets/cafe-rapat.svg">
@@ -75,6 +78,7 @@ if (!isset($_SESSION['username'])) {
         <div class="kotak_tenang"></div>
         <div class="kotak_ramai"></div>
         <div class="kotak_art"></div>
+        <div class="kotak_modern"></div>
 
         <div class="kotak_rapat"></div>
         <div class="kotak_belajar"></div>
@@ -83,6 +87,7 @@ if (!isset($_SESSION['username'])) {
         <div class="word_tenang"><b>Tenang</b></div>
         <div class="word_ramai"><b>Ramai</b></div>
         <div class="word_art"><b>Artistik</b></div>
+        <div class="word_modern"><b>Modern</b></div>
 
         <div class="word_rapat"><b>Rapat</b></div>
         <div class="word_belajar"><b>Belajar</b></div>
