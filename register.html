@@ -7,6 +7,8 @@
     <title>Register</title>
     <link rel="stylesheet" href="css/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 </head>
 
 <body class="bg">
@@ -17,7 +19,15 @@
         <div class="silahkan">
             Silahkan buat akun terlebih dahulu
         </div>
-        <form action="process/register-process.php" method="post">
+        <form action="process/register-process.php" method="post"  enctype="multipart/form-data">
+            <div class="profile-picture">
+                <button id="uploadButton">
+                    <div class="circle-placeholder" id="circlePlaceholder">
+                        <img src="" alt="Profile Picture" id="profileImgEdit" />
+                    </div>
+                </button>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+            </div>
             <div class="form_fullname">
                 <label class="label_fn">Full Name</label><br>
                 <input type="text" name="form_fullname" required><br>
@@ -41,13 +51,7 @@
             <div class="form_konfirmasi_password">
                 <label class="label_konfpw">Konfirmasi Password</label><br>
                 <input type="password" name="form_konfirmasi_password" required><br>
-            </div>
-            <div class="profile-picture">
-                <img src="Profile.png" alt="Profile Picture" id="profileImgEdit" />
-                <input type="file" id="fileInput" accept="image/*" />
-                <label for="fileInput" class="upload-button">Change Photo</label>
-                <button class="delete-button" id="deletePhoto">Remove Photo</button>
-            </div>
+            </div> 
             <div class="form_button">
                 <button type="submit">Register</button>
             </div>
@@ -59,7 +63,29 @@
     </div>
 
     <script src="javascipt/register.js"></script>
-    
+
 </body>
+<script>
+
+    const fileInput = document.getElementById('fileInput');
+    const uploadButton = document.getElementById('uploadButton');
+    const profileImgEdit = document.getElementById('profileImgEdit');
+    const circlePlaceholder = document.getElementById('circlePlaceholder');
+    uploadButton.addEventListener('click', function () {
+        fileInput.click();
+    });
+    fileInput.addEventListener('change', function (event) {
+        if (event.target.files && event.target.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                profileImgEdit.src = e.target.result;
+                profileImgEdit.style.display = 'block';
+                circlePlaceholder.style.backgroundColor = 'transparent';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    });
+</script>
 
 </html>

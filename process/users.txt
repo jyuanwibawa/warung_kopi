@@ -13,3 +13,48 @@ Password: 1234
 Username: asd
 Password: asd
 
+Username: kuikui
+Password: 123
+
+Full Name: Dafa
+Username: dafa123
+Email: dafa@gmail.com
+Phone: 1234567
+Password: 321
+
+Full Name: qwqwqq
+Username: 123
+Email: jatiyuanamartawibawwwwa@gmail.com
+Phone: 2132131
+Password: 321
+
+Full Name: 1222
+Username: www
+Email: jatiyuanamartwwawibawwwwa@gmail.com
+Phone: 1234567
+Password: 123
+
+Full Name: 1111
+Username: 111
+Email: 1111@gmail.com
+Phone: 1234567
+Password: 123
+
+Full Name: 1
+Username: q
+Email: qq@gmail.com
+Phone: 123
+Password: 123
+
+Full Name: 111
+Username: 111
+Email: 111
+Phone: 111
+Password: 111
+
+Full Name: Jati Yuana
+Username: kulikuli
+Email: 1111@gmail.com
+Phone: 082157088989
+Password: 123
+

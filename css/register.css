@@ -250,4 +250,33 @@
         opacity: 1;
         transform: translateY(0);
     }
-    
+     .profile-picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #uploadButton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .circle-placeholder {
+        width: 80px;
+        height: 80px;
+        background-color: #ccc; 
+        border-radius: 50%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #bbb; 
+    }
+
+    .circle-placeholder img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; 
+        object-fit: cover; 
+        display: none; 
+    }

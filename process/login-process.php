@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Set session untuk menyimpan username
             $_SESSION['username'] = $currentUser['username'];
 
-            header("Location: ../home.php");
+            header("Location: ../profile.php");
             exit();
         } else {
             header("Location: ../login.html");
