@@ -18,9 +18,21 @@
             Silahkan buat akun terlebih dahulu
         </div>
         <form action="process/register-process.php" method="post">
+            <div class="form_fullname">
+                <label class="label_fn">Full Name</label><br>
+                <input type="text" name="form_fullname" required><br>
+            </div>
             <div class="form_username">
                 <label class="label_usn">Username</label><br>
                 <input type="text" name="form_username" required><br>
+            </div>
+            <div class="form_email">
+                <label class="label_email">Email</label><br>
+                <input type="text" name="form_email" required><br>
+            </div>
+            <div class="form_phone">
+                <label class="label_phone">Phone</label><br>
+                <input type="text" name="form_phone" required><br>
             </div>
             <div class="form_password">
                 <label class="label_pw">Password</label><br>
@@ -29,6 +41,12 @@
             <div class="form_konfirmasi_password">
                 <label class="label_konfpw">Konfirmasi Password</label><br>
                 <input type="password" name="form_konfirmasi_password" required><br>
+            </div>
+            <div class="profile-picture">
+                <img src="Profile.png" alt="Profile Picture" id="profileImgEdit" />
+                <input type="file" id="fileInput" accept="image/*" />
+                <label for="fileInput" class="upload-button">Change Photo</label>
+                <button class="delete-button" id="deletePhoto">Remove Photo</button>
             </div>
             <div class="form_button">
                 <button type="submit">Register</button>
@@ -41,6 +59,7 @@
     </div>
 
     <script src="javascipt/register.js"></script>
+    
 </body>
 
 </html>
