@@ -1,66 +1,54 @@
 <?php
+// Contoh koneksi ke database MySQL menggunakan PDO
+$dsn = 'mysql:host=localhost;dbname=cafe';
+$username = 'root';
+$password = '';
+
+try {
+    $db = new PDO($dsn, $username, $password);
+} catch (PDOException $e) {
+    die("Koneksi gagal: " . $e->getMessage());
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullname = $_POST['form_fullname']; 
+    $fullname = $_POST['form_fullname'];
     $username = $_POST['form_username'];
-    $email = $_POST['form_email']; 
-    $phone = $_POST['form_phone']; 
-    $password = $_POST['form_password'];
+    $email = $_POST['form_email'];
+    $phone = $_POST['form_phone'];
+    $password = password_hash($_POST['form_password'], PASSWORD_BCRYPT); // Hash password
     $confirmPassword = $_POST['form_konfirmasi_password'];
 
-    // Validasi password
-    if ($password !== $confirmPassword) {
+    if (!password_verify($confirmPassword, $password)) {
         header('Location: register.html');
-        exit(); 
+        exit();
     }
 
-    // Simpan data pengguna ke dalam file users.txt
-    $file = fopen("users.txt", "a");
-    fwrite($file, "Full Name: " . $fullname . "\n");
-    fwrite($file, "Username: " . $username . "\n");
-    fwrite($file, "Email: " . $email . "\n");
-    fwrite($file, "Phone: " . $phone . "\n");
-    fwrite($file, "Password: " . $password . "\n\n"); 
-    fclose($file);
+    // Insert data ke tabel users
+    $stmt = $db->prepare("INSERT INTO users (fullname, username, email, phone, password) VALUES (?, ?, ?, ?, ?)");
+    $stmt->execute([$fullname, $username, $email, $phone, $password]);
 
-    // Mengupload gambar
+    // Dapatkan ID pengguna yang baru saja diinsert
+    $userId = $db->lastInsertId();
+
+    // Cek apakah ada file yang diunggah
     if (isset($_FILES['fileInput']) && $_FILES['fileInput']['error'] == UPLOAD_ERR_OK) {
-        // Tentukan nama folder berdasarkan username
-        $targetDir = "img/" . $username . "/"; // Folder tujuan untuk menyimpan gambar
-        $targetFile = $targetDir . basename($_FILES['fileInput']['name']);
-        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $targetDir = "../img/" . $username . "/";
+        $targetFile = $targetDir . "Profile.png";
 
-        // Cek apakah file gambar adalah gambar yang sebenarnya
-        $check = getimagesize($_FILES['fileInput']['tmp_name']);
-        if ($check === false) {
-            die("File yang diunggah bukan gambar.");
-        }
-
-        // Cek ukuran file (misalnya maksimum 5MB)
-        if ($_FILES['fileInput']['size'] > 5000000) {
-            die("Maaf, ukuran file terlalu besar.");
-        }
-
-        // Hanya izinkan format file tertentu
-        if (!in_array($imageFileType, ['jpg', 'png', 'jpeg', 'gif'])) {
-            die("Maaf, hanya file JPG, JPEG, PNG, dan GIF yang diizinkan.");
-        }
-
-        // Coba untuk membuat folder jika belum ada
+        // Buat direktori jika belum ada
         if (!file_exists($targetDir)) {
-            mkdir($targetDir, 0777, true); // Buat folder berdasarkan username
+            mkdir($targetDir, 0777, true);
         }
 
-        // Pindahkan file yang diunggah ke folder tujuan
         if (move_uploaded_file($_FILES['fileInput']['tmp_name'], $targetFile)) {
-            echo "File gambar telah diunggah ke folder " . $targetDir;
-        } else {
-            echo "Maaf, terjadi kesalahan saat mengunggah gambar. Kode kesalahan: " . $_FILES['fileInput']['error'];
+            // Insert path gambar ke tabel profile_images
+            $stmt = $db->prepare("INSERT INTO profile_images (user_id, image_path) VALUES (?, ?)");
+            $stmt->execute([$userId, $targetFile]);
         }
-    } else {
-        echo "Tidak ada gambar yang diunggah atau terjadi kesalahan. Kode kesalahan: " . $_FILES['fileInput']['error'];
     }
 
     header('Location: ../login.html');
-    exit();  
+    exit();
 }
+
 ?>

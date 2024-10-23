@@ -1,20 +1,3 @@
-Username: ilham
-Password: ikanhiu
-
-Username: rawr
-Password: rawr
-
-Username: bbb
-Password: bbb
-
-Username: yxsh
-Password: 1234
-
-Username: asd
-Password: asd
-
-Username: kuikui
-Password: 123
 
 Full Name: Dafa
 Username: dafa123
@@ -54,6 +37,24 @@ Password: 111
 
 Full Name: Jati Yuana
 Username: kulikuli
+Email: 1111@gmail.com
+Phone: 082157088989
+Password: 123
+
+Full Name: 1111
+Username: 1111
+Email: 111
+Phone: 111
+Password: 111
+
+Full Name: 1234
+Username: 123
+Email: 1111@gmail.com
+Phone: 123
+Password: 123
+
+Full Name: Ilham anda
+Username: kulao
 Email: 1111@gmail.com
 Phone: 082157088989
 Password: 123
