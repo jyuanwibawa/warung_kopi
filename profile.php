@@ -7,56 +7,25 @@ if (!isset($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
-$usersFile = "process/users.txt";
-$userData = [
-    'full_name' => '',
-    'username' => '',
-    'email' => '',
-    'phone' => '',
-    'password' => ''
-];
 
-function parseUsersFile($filePath) {
-    $users = [];
+// Koneksi ke database
+$dsn = 'mysql:host=localhost;dbname=cafe';  // Ganti dengan informasi database Anda
+$dbUsername = 'root';  // Ganti dengan username database Anda
+$dbPassword = '';  // Ganti dengan password database Anda
 
-    if (!file_exists($filePath)) {
-        return $users;
-    }
-
-    $fileContent = file_get_contents($filePath);
-  
-    $userBlocks = preg_split("/\n\s*\n/", trim($fileContent));
-
-    foreach ($userBlocks as $block) {
-        $lines = explode("\n", trim($block));
-        $user = [];
-        foreach ($lines as $line) {
-            $parts = explode(":", $line, 2);
-            if (count($parts) == 2) {
-                $key = strtolower(trim($parts[0]));
-                $value = trim($parts[1]);
-                $key = str_replace(' ', '_', $key);
-                $user[$key] = $value;
-            }
-        }
-        if (!empty($user)) {
-            $users[] = $user;
-        }
-    }
-
-    return $users;
+try {
+    $db = new PDO($dsn, $dbUsername, $dbPassword);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Koneksi ke database gagal: " . $e->getMessage());
 }
 
-$allUsers = parseUsersFile($usersFile);
+// Ambil data user dari tabel users berdasarkan username
+$stmt = $db->prepare("SELECT * FROM users WHERE username = ?");
+$stmt->execute([$username]);
+$userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
-foreach ($allUsers as $user) {
-    if (isset($user['username']) && $user['username'] === $username) {
-        $userData = $user;
-        break;
-    }
-}
-
-if (empty($userData['username'])) {
+if (!$userData) {
     die("User not found.");
 }
 
@@ -74,6 +43,21 @@ if (!file_exists($profileImgSrc)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil dan Edit Profil</title>
     <link rel="stylesheet" href="css/profile.css" />
+    <style>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .profile-section, .edit-profile-section {
+                padding: 20px;
+            }
+            .nav-links li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -96,7 +80,7 @@ if (!file_exists($profileImgSrc)) {
                     <button class="edit-button" id="editProfile">Edit Profil</button>
                 </div>
                 <div class="profile-details">
-                    <p><strong>Nama:</strong> <?php echo htmlspecialchars($userData['full_name']); ?></p>
+                    <p><strong>Nama:</strong> <?php echo htmlspecialchars($userData['fullname']); ?></p>
                     <p><strong>Email:</strong> <?php echo htmlspecialchars($userData['email']); ?></p>
                     <p><strong>Telepon:</strong> <?php echo htmlspecialchars($userData['phone']); ?></p>
                 </div>
@@ -117,7 +101,7 @@ if (!file_exists($profileImgSrc)) {
                 <div class="profile-details">
                     <form action="update-profile.php" method="POST">
                         <label for="fullname">Nama</label>
-                        <input type="text" id="fullname" name="fullname" value="<?php echo htmlspecialchars($userData['full_name']); ?>" required />
+                        <input type="text" id="fullname" name="fullname" value="<?php echo htmlspecialchars($userData['fullname']); ?>" required />
 
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($userData['email']); ?>" required />

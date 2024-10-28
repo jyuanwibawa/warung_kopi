@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirmPassword = $_POST['form_konfirmasi_password'];
 
     if (!password_verify($confirmPassword, $password)) {
-        header('Location: register.html');
+        header('Location: register2.html');
         exit();
     }
 
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    header('Location: ../login.html');
+    header('Location: ../login2.html');
     exit();
 }
 
